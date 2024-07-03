@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "extends": ["next", "next/core-web-vitals"],
+  "rules": {
+    "camelcase": "off",
+    "comma-dangle": [2, "always-multiline"],
+    "keyword-spacing": 2,
+    "quotes": [2, "single"],
+    "semi": ["error", "never"]
+  }
+}
