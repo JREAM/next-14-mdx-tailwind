@@ -9,11 +9,11 @@ type Inputs = {
   rememberMe: boolean
 }
 
-export default async function Page() {
+export default function Page() {
+
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>({
     defaultValues: {
@@ -53,12 +53,12 @@ export default async function Page() {
           {errors.rememberMe && <p role="alert">{errors.rememberMe.message}</p>}
         </div>
 
-        <div className="mb-6 text-blue-500">
-          <Link href="/signup">Signup</Link> |
+        <div className="mb-6 text-blue-700">
+          <Link href="/signup">Signup</Link> | {' '}
           <Link href="/forgot-password">Forgot Password?</Link>
         </div>
 
-        <button type="submit" className="btn btn-outline btn-primary">Login</button>
+        <button type="submit" className="btn btn-info">Login</button>
 
       </form>
     </div>

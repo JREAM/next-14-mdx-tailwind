@@ -1,8 +1,10 @@
-import "@/styles/global.css";
 import Image from "next/image";
 import { headers } from "next/headers";
+import "@/styles/global.css";
 import PostInfo from "@/components/posts/PostInfo";
 import { getPostBySlug } from "@/lib/api";
+
+// This wont work for subfolders nor [slug] based on how URI is made
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const slug = headers().get("x-next-post-slug") as string;

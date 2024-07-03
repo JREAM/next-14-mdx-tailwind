@@ -1,10 +1,10 @@
 import React from "react";
-import { getAllPosts } from "@/lib/api";
 import Link from "next/link";
 import Image from "next/image";
-import PostInfo from "./PostInfo";
+import { getAllPosts } from "@/lib/api";
+import PostInfo from "@/components/posts/PostInfo";
 
-export default async function AllAPosts() {
+export default async function PostList() {
   const posts = await getAllPosts();
 
   return (

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: '...',
 }
 
-export default async function Page() {
+export default function Page() {
   return (
     <>
       <div className="m-4 sm:m-8">

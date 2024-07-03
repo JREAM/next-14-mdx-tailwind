@@ -5,7 +5,6 @@ const importAll = (r): Promise<Post[]> =>
     r.keys().map(async (fileName) => {
       const module = r(fileName);
       const slug = fileName.substr(2).replace(/\/page\.mdx$/, "");
-
       return {
         slug,
         metadata: module?.metadata,
@@ -22,7 +21,6 @@ export const getAllPosts = async (): Promise<Post[]> =>
   );
 
 export const getPostBySlug = async (slug: string): Promise<Post> => {
-  console.log(process.cwd())
   const module = require(`../app/posts/${slug}/page.mdx`);
 
   return {

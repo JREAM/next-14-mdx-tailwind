@@ -7,7 +7,7 @@ type Inputs = {
   email: string
 }
 
-export default async function Page() {
+export default function Page() {
   const {
     register,
     handleSubmit,
@@ -34,12 +34,12 @@ export default async function Page() {
           {errors.email && <p role="alert">{errors.email.message}</p>}
         </label>
 
-        <div className="mb-6 text-blue-500">
-          <Link href="/signup">Signup</Link> |
-          <Link href="/forgot-password">Login</Link>
+        <div className="mb-6 text-blue-700">
+          <Link href="/signup">Signup</Link> | {' '}
+          <Link href="/login">Login</Link>
         </div>
 
-        <button type="submit" className="btn btn-outline btn-primary">Reset Password</button>
+        <button type="submit" className="btn btn-info">Reset Password</button>
 
       </form>
     </div>

@@ -7,12 +7,8 @@ module.exports = {
   ],
   daisyui: {
     themes: false,
+    darkTheme: "dim",
     logs: true
-  },
-  theme: {
-    extend: {
-      hero: `url('../public/images/hero.png')`
-    },
   },
   plugins: [
     require("@tailwindcss/typography"),

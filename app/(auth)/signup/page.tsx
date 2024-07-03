@@ -9,7 +9,7 @@ type Inputs = {
   confirmPassword: string
 }
 
-export default async function Page() {
+export default function Page() {
   const {
     register,
     handleSubmit,
@@ -52,12 +52,12 @@ export default async function Page() {
           {errors.confirmPassword && <p role="alert">{errors.confirmPassword.message}</p>}
         </label>
 
-        <div className="mb-6 text-blue-500">
-          <Link href="/login">Login</Link> |
+        <div className="mb-6 text-blue-700">
+          <Link href="/login">Login</Link> | {' '}
           <Link href="/forgot-password">Forgot Password?</Link>
         </div>
 
-        <button type="submit" className="btn btn-outline btn-primary">Signup</button>
+        <button type="submit" className="btn btn-info">Signup</button>
 
       </form>
     </div>
